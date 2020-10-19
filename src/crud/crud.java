@@ -397,7 +397,7 @@ public class crud extends javax.swing.JFrame {
             insert.setString(3,quantity);
             insert.setString(4,state);
             insert.executeUpdate();
-            JOptionPane.showMessageDialog(this, "Item Saved");
+            JOptionPane.showMessageDialog(this, "Do you want to Add Item?");
             
             txtname.setText("");
             txtcategory.setText("");
@@ -419,7 +419,7 @@ public class crud extends javax.swing.JFrame {
         int selectedIndex = jTable1.getSelectedRow();
             try { 
             int itemCode = Integer.parseInt(model.getValueAt(selectedIndex, 0).toString());
-            int dialogResult = JOptionPane.showConfirmDialog (null, "Do you want to Delete the record","Warning",JOptionPane.YES_NO_OPTION);
+            int dialogResult = JOptionPane.showConfirmDialog (null, "Do you want to Delete this Item?","Warning",JOptionPane.YES_NO_OPTION);
             if(dialogResult == JOptionPane.YES_OPTION){
   
                 Class.forName("com.mysql.jdbc.Driver");
@@ -428,7 +428,7 @@ public class crud extends javax.swing.JFrame {
         
                 insert.setInt(1,itemCode);
                 insert.executeUpdate();
-                JOptionPane.showMessageDialog(this, "Item Delete");
+                JOptionPane.showMessageDialog(this, "Are You Sure ?");
                 txtname.setText("");
                 txtcategory.setText("");
                 txtquantity.setText("");
@@ -491,7 +491,7 @@ public class crud extends javax.swing.JFrame {
             insert.setString(4,state);
             insert.setInt(5,id);
             insert.executeUpdate();
-            JOptionPane.showMessageDialog(this, "Item Updated");
+            JOptionPane.showMessageDialog(this, "Do you want to Update this Item?");
             txtname.setText("");
             txtcategory.setText("");
             txtquantity.setText("");
