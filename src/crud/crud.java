@@ -75,6 +75,7 @@ public class crud extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("CRUD");
         setBackground(new java.awt.Color(0, 51, 51));
+        setMinimumSize(new java.awt.Dimension(1370, 660));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable1.setBackground(new java.awt.Color(153, 255, 153));
@@ -107,7 +108,7 @@ public class crud extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
         jTable1.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 180, 700, 300));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 180, 700, 320));
 
         jPanel1.setBackground(new java.awt.Color(153, 255, 153));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
@@ -144,6 +145,7 @@ public class crud extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(153, 204, 0));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/crud/photos/add.png"))); // NOI18N
         jButton1.setText("Add");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -153,6 +155,7 @@ public class crud extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(153, 204, 0));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/crud/photos/remove.png"))); // NOI18N
         jButton2.setText("Delete");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,6 +165,7 @@ public class crud extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(153, 204, 0));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/crud/photos/update.png"))); // NOI18N
         jButton3.setText("Update");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -208,35 +212,36 @@ public class crud extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel5))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtname)
-                    .addComponent(txtcategory)
-                    .addComponent(txtquantity)
+                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labvalquantity, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labvalstate, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labvalcategory, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labvalname, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(txtstate))
-                .addGap(34, 34, 34))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(jButton3)
-                .addGap(18, 18, 18)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(24, Short.MAX_VALUE))
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel5))
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labvalquantity, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labvalcategory, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labvalname, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(386, 386, 386)
+                                        .addComponent(labvalstate, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(txtstate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 397, Short.MAX_VALUE)
+                                .addComponent(txtquantity, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtcategory, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtname, javax.swing.GroupLayout.Alignment.LEADING))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(51, 51, 51)
+                        .addComponent(jButton3)
+                        .addGap(37, 37, 37)
+                        .addComponent(jButton2)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -266,18 +271,22 @@ public class crud extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtstate, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labvalstate, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton3)
-                    .addComponent(jButton5)
-                    .addComponent(jButton2))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(77, 77, 77)
+                        .addComponent(labvalstate, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addComponent(jButton5)
+                .addGap(26, 26, 26))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, -1, 420));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 560, 480));
 
         jPanel2.setBackground(new java.awt.Color(153, 255, 153));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -287,6 +296,7 @@ public class crud extends javax.swing.JFrame {
 
         jButton4.setBackground(new java.awt.Color(153, 204, 0));
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/crud/photos/logout.png"))); // NOI18N
         jButton4.setText("LogOut");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -294,36 +304,37 @@ public class crud extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(370, Short.MAX_VALUE)
                 .addComponent(jLabel4)
-                .addGap(312, 312, 312)
+                .addGap(419, 419, 419)
                 .addComponent(jButton4)
-                .addGap(119, 119, 119))
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(jButton4))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addComponent(jLabel4)))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 90));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 90));
 
         btnPrint.setBackground(new java.awt.Color(153, 204, 0));
         btnPrint.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnPrint.setIcon(new javax.swing.ImageIcon(getClass().getResource("/crud/photos/print.png"))); // NOI18N
         btnPrint.setText("Print");
         btnPrint.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPrintActionPerformed(evt);
             }
         });
-        getContentPane().add(btnPrint, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 490, 300, 40));
+        getContentPane().add(btnPrint, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 520, 300, 60));
 
         jTextField1.setBackground(new java.awt.Color(153, 255, 153));
         jTextField1.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
@@ -342,28 +353,34 @@ public class crud extends javax.swing.JFrame {
                 jTextField1MouseClicked(evt);
             }
         });
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
         jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTextField1KeyReleased(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 130, 700, 40));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 110, 700, 40));
 
         btnreport.setBackground(new java.awt.Color(153, 204, 0));
         btnreport.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnreport.setIcon(new javax.swing.ImageIcon(getClass().getResource("/crud/photos/report.png"))); // NOI18N
         btnreport.setText("Generate Report");
         btnreport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnreportActionPerformed(evt);
             }
         });
-        getContentPane().add(btnreport, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 490, 380, 40));
+        getContentPane().add(btnreport, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 520, 340, 60));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
         
-  
+ //*************************************************Add Button*******************************************************************************
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        
            String name =txtname.getText();
@@ -413,6 +430,7 @@ public class crud extends javax.swing.JFrame {
         }    
     }//GEN-LAST:event_jButton1ActionPerformed
 
+   //*************************************************Delete Button***************************************************************************************
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
          DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
@@ -441,6 +459,7 @@ public class crud extends javax.swing.JFrame {
         }   
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    //*******************************************Row selection*****************************************************************
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         int selectedIndex = jTable1.getSelectedRow();
@@ -451,29 +470,24 @@ public class crud extends javax.swing.JFrame {
         txtstate.setText(model.getValueAt(selectedIndex, 4).toString());
     }//GEN-LAST:event_jTable1MouseClicked
 
-    
+//*************************************************Update Button**********************************************************    
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
             DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
             int selectedIndex = jTable1.getSelectedRow();
           
             if(txtname.getText().trim().isEmpty()){
                labvalname.setText("Name Fields are Empty");
-           
             }
             else if (txtcategory.getText().trim().isEmpty()){
                labvalcategory.setText("CategoryFields are Empty");
             }
-           
             else if (txtquantity.getText().trim().isEmpty()){
                labvalquantity.setText("Quantity are Empty");
             }
-           
             else if (txtstate.getText().trim().isEmpty()){
                labvalstate.setText("State are Empty");
             }
-            
             else{
-            
                  try {   
                 
             int id = Integer.parseInt(model.getValueAt(selectedIndex, 0).toString());
@@ -500,17 +514,13 @@ public class crud extends javax.swing.JFrame {
             table_update();
             
         } catch (ClassNotFoundException ex) {
-           
         } catch (SQLException ex) {
-
-        }
-            
-        }
-        
+        }   
+        }   
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void txtstateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtstateActionPerformed
-       
+   
     }//GEN-LAST:event_txtstateActionPerformed
 
     private void txtnameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnameKeyReleased
@@ -529,6 +539,7 @@ public class crud extends javax.swing.JFrame {
         labvalstate.setText("");
     }//GEN-LAST:event_txtstateKeyReleased
 
+    //***********************************Print Button***************************************************
     private void btnPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrintActionPerformed
         MessageFormat header = new MessageFormat("Inventory Management Report");
         MessageFormat footer = new MessageFormat("Page(1)");
@@ -551,6 +562,7 @@ public class crud extends javax.swing.JFrame {
         tr.setRowFilter(RowFilter.regexFilter(search));   
     }//GEN-LAST:event_jTextField1KeyReleased
 
+    //************************************************Search Bar******************************************************
     private void jTextField1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField1FocusGained
         if(jTextField1.getText().equals("Type item Code here to search............")){
             jTextField1.setText("");
@@ -566,6 +578,7 @@ public class crud extends javax.swing.JFrame {
         jTextField1.setForeground(new Color(236,240,241));
     }//GEN-LAST:event_jTextField1FocusLost
 
+    //***********************************Demo Button***************************************************
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         txtname.setText("Shampoo");
         txtcategory.setText("Bathroom Equipment");
@@ -573,6 +586,7 @@ public class crud extends javax.swing.JFrame {
         txtstate.setText("Bellose");
     }//GEN-LAST:event_jButton5ActionPerformed
 
+//**************************************************Generate Report Button*******************************************************
     private void btnreportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnreportActionPerformed
         String path ="";
         JFileChooser j = new JFileChooser();
@@ -630,6 +644,10 @@ public class crud extends javax.swing.JFrame {
         doc.close();
                
     }//GEN-LAST:event_btnreportActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void table_update() {
         int CC;
