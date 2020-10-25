@@ -3,8 +3,6 @@ package crud;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
 import javax.swing.UnsupportedLookAndFeelException;
-
-
 import com.lowagie.text.Document;
 import com.lowagie.text.DocumentException;
 import com.lowagie.text.pdf.PdfPTable;
@@ -442,8 +440,7 @@ public class crud extends javax.swing.JFrame {
 
    //*************************************************Delete Button***************************************************************************************
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         int selectedIndex = jTable1.getSelectedRow();
             try { 
             int itemCode = Integer.parseInt(model.getValueAt(selectedIndex, 0).toString());
@@ -530,7 +527,7 @@ public class crud extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void txtstateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtstateActionPerformed
-   
+
     }//GEN-LAST:event_txtstateActionPerformed
 
     private void txtnameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnameKeyReleased
@@ -614,7 +611,6 @@ public class crud extends javax.swing.JFrame {
             tbl.addCell("Quentity");
             //tbl.addCell("State");
             
-            
             for (int i =0; i<jTable1.getRowCount();i++){
                 String code = jTable1.getValueAt(i, 0).toString();
                 String name = jTable1.getValueAt(i, 1).toString();
@@ -631,7 +627,7 @@ public class crud extends javax.swing.JFrame {
             }
             doc.add(tbl);
             
-            JOptionPane.showMessageDialog(null,"Downloaded pdf","",JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Do you want to Download Report as a pdf ? ","",JOptionPane.WARNING_MESSAGE);
           
         }
             catch( FileNotFoundException ex){
@@ -648,17 +644,20 @@ public class crud extends javax.swing.JFrame {
     }//GEN-LAST:event_btnreportActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_jTextField1ActionPerformed
 
+    //*****************************Demo Button**********************************************************************************
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         txtname.setText("Shampoo");
-        txtcategory.setText("Bathroom Equipment");
-        txtquantity.setText("150");
-        txtstate.setText("Bellose");
+        txtcategory.setText("Bathroom Items");
+        txtquantity.setText("125");
+        txtstate.setText("Bellose-250ml");
         
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    
+    //*****************************table update class*************************************************
     private void table_update() {
         int CC;
         try {
